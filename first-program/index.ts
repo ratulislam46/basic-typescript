@@ -1,5 +1,7 @@
+export { }
 
 // tsc index.ts -> index.js ->node index.js 
+
 let userName: string = "Ratul islam";
 let age: number = 23
 console.log(userName);
