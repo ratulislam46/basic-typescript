@@ -9,6 +9,6 @@
 ## 7. Any data type -->
 ## 8. Object data type -->
 ## 9. Custom type --> type customType = "GET" | "POST"
-## 10.
+## 10.Function signature
 ## 11.
 ## 12.
