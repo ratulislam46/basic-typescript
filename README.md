@@ -54,3 +54,36 @@ let skills: string[] = ["JavaScript", "TypeScript"];
 
 // Tuple - এখানে প্রথমটি number এবং দ্বিতীয়টি string হতেই হবে (ফিক্সড)
 let user: [number, string] = [101, "Karim"];
+```
+
+### ৪. ইন্টারফেস এবং টাইপ অ্যালিয়াস
+**বিবরণ:** অবজেক্টের জন্য কাস্টম টাইপ বা ব্লু-প্রিন্ট তৈরি করা।
+**কেন ব্যবহার করবেন:** কোডকে রিইউজেবল এবং ক্লিন রাখতে।
+
+```typescript
+// Type Alias
+type ID = string | number;
+
+// Interface
+interface UserAccount {
+  readonly id: ID;
+  name: string;
+  email?: string; // ? মানে অপশনাল প্রপার্টি
+}
+
+const user1: UserAccount = { id: 101, name: "Sakib" };
+```
+
+### ৫. ফাংশন টাইপিং
+**বিবরণ:** ফাংশনের প্যারামিটার এবং আউটপুট টাইপ ডিফাইন করা।
+**কেন ব্যবহার করবেন:** ফাংশন যাতে সবসময় সঠিক ডেটা রিটার্ন করে তা নিশ্চিত করতে।
+
+```typescript
+function calculateSum(a: number, b: number): number {
+  return a + b;
+}
+
+function greet  (name: string): void {
+  console.log("Hello " + name);
+};
+``
