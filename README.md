@@ -12,7 +12,14 @@
 - Union & Intersection  
 - Enums  
 - Generics  
-- Type Assertion  
+- Type Assertion 
+- Type Inference 
+- Literal Types  
+- Optional & Default Parameters
+- Unknown vs Any  
+- Never Typ  
+- Type Narrowing  
+- Inline Object Type & Readonly 
 
 ---
 
@@ -215,3 +222,146 @@ let textLength: number = (myData as string).length;
 
 ---
 
+## 🔟 Type Inference
+
+**বিবরণ:**  
+TypeScript অনেক সময় স্বয়ংক্রিয়ভাবে (automatically) ভেরিয়েবলের টাইপ নির্ধারণ করে।
+
+**কেন ব্যবহার করবেন:**  
+সবসময় টাইপ লিখতে হয় না; কোড clean ও short থাকে।
+
+### ✅ উদাহরণ
+
+```typescript
+let age = 25;          // inferred as number
+let userName = "Ali";  // inferred as string
+let isActive = true;   // inferred as boolean
+```
+
+---
+
+## 1️⃣1️⃣ Literal Types
+
+**বিবরণ:**  
+একটি ভেরিয়েবলকে নির্দিষ্ট মানের মধ্যে সীমাবদ্ধ রাখা যায়।
+
+**কেন ব্যবহার করবেন:**  
+Strict value control করতে এবং ভুল ইনপুট প্রতিরোধ করতে।
+
+### ✅ উদাহরণ
+
+```typescript
+let direction: "up" | "down";
+
+direction = "up";    // ✅ valid
+// direction = "left"; ❌ error
+```
+
+---
+
+## 1️⃣2️⃣ Optional & Default Parameters
+
+**বিবরণ:**  
+ফাংশনের parameter optional করা যায় অথবা default value দেওয়া যায়।
+
+**কেন ব্যবহার করবেন:**  
+Flexible function তৈরি করতে।
+
+### ✅ উদাহরণ
+
+```typescript
+function greet(name: string = "Guest"): void {
+  console.log("Hello " + name);
+}
+
+greet();          // Hello Guest
+greet("Rahim");   // Hello Rahim
+```
+
+---
+
+## 1️⃣3️⃣ Unknown vs Any
+
+**বিবরণ:**  
+any → যেকোনো টাইপ অনুমতি দেয়
+unknown → নিরাপদ টাইপ, ব্যবহার করার আগে টাইপ চেক করতে হয়
+
+**কেন ব্যবহার করবেন:**  
+Type safety বজায় রাখতে unknown ব্যবহার করা উত্তম।
+
+### ✅ উদাহরণ
+
+```typescript
+let value: unknown = "TypeScript";
+
+if (typeof value === "string") {
+  console.log(value.toUpperCase());
+}
+
+let anything: any = 10;
+anything.toUpperCase(); // ❌ runtime error হতে পারে
+```
+
+---
+
+## 1️⃣4️⃣ Never Type
+
+**বিবরণ:**  
+যে ফাংশন কখনো কিছু return করে না (যেমন error throw করে)।
+
+**কেন ব্যবহার করবেন:**  
+Impossible state বোঝাতে।
+
+### ✅ উদাহরণ
+
+```typescript
+function throwError(message: string): never {
+  throw new Error(message);
+}
+```
+
+---
+
+## 1️⃣5️⃣ Type Narrowing
+
+**বিবরণ:**  
+Union টাইপ ব্যবহার করলে condition দিয়ে নির্দিষ্ট টাইপ নির্ধারণ করা।
+
+**কেন ব্যবহার করবেন:**  
+Union টাইপ safe ভাবে ব্যবহার করতে।
+
+### ✅ উদাহরণ
+
+```typescript
+function printId(id: string | number) {
+  if (typeof id === "string") {
+    console.log(id.toUpperCase());
+  } else {
+    console.log(id.toFixed(2));
+  }
+}
+```
+
+---
+
+## 1️⃣6️⃣ Inline Object Type & Readonly
+
+**বিবরণ:**  
+Interface ছাড়াও সরাসরি object type define করা যায়।
+Readonly property পরিবর্তন করা যায় না।
+
+**কেন ব্যবহার করবেন:**  
+ছোট object structure দ্রুত define করতে।
+
+### ✅ উদাহরণ
+
+```typescript
+let user: { readonly id: number; name: string } = {
+  id: 101,
+  name: "Karim"
+};
+
+// user.id = 200; ❌ error (readonly)
+```
+
+---
