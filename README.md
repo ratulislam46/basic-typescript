@@ -27,3 +27,30 @@
 ```bash
 npm install -g typescript
 ```
+
+প্রজেক্ট কনফিগারেশন ফাইল তৈরি করতে
+```bash
+tsc --init
+```
+
+### ২. বেসিক টাইপস
+**বিবরণ:** ভেরিয়েবলের ডেটা টাইপ আগে থেকে বলে দেওয়া।
+**কেন ব্যবহার করবেন:** টাইপ মিসম্যাচ এরর এড়াতে।
+
+```bash
+let age: number = 25;
+let userName: string = "Zunayed";
+let isDeveloper: boolean = true;
+let anything: any = "এটা যেকোনো টাইপ হতে পারে";
+```
+
+### ৩. অ্যারে এবং টাপল
+**বিবরণ:** অ্যারে হলো ডেটার লিস্ট এবং টাপল হলো ফিক্সড সাইজের অ্যারে।
+**কেন ব্যবহার করবেন:** ডেটা স্ট্রাকচারকে সুরক্ষিত রাখতে।
+
+```typescript
+// Array - এখানে শুধু স্ট্রিং থাকতে পারবে
+let skills: string[] = ["JavaScript", "TypeScript"];
+
+// Tuple - এখানে প্রথমটি number এবং দ্বিতীয়টি string হতেই হবে (ফিক্সড)
+let user: [number, string] = [101, "Karim"];
