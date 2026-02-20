@@ -17,4 +17,4 @@ userInfo3 = (name, age) => {
 
 // userInfo1()
 userInfo2("Md Ratul Howlader")
-userInfo3("Rabbi", 23)
+userInfo3("S M Alamin", 23)
