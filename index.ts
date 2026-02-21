@@ -83,3 +83,39 @@ function updateStatus(status: Status): void {
     console.log("Order Status:", status);
 }
 // updateStatus(Status.completed)
+
+
+
+// 10 --> Type Inference
+let age = 25;          // inferred as number
+let userName = "Ali";  // inferred as string
+let isActive = true;   // inferred as boolean
+// console.log(typeof userName);
+
+
+
+// 11 --> Literal Types 
+let direction: "up" | "down" | "right";
+direction = "down";
+// console.log(direction);
+
+
+
+// 12 --> Optional $ Default Parameters 
+function userRole(role: string = "user"): void {
+    console.log(role);
+};
+// userRole()
+// userRole("Admin")
+
+
+
+// 13 --> unknown and Any 
+let value: unknown = "TypeScript";
+
+if (typeof value === "string") {
+    console.log(value.toUpperCase());
+}
+
+let anything: any = 10;
+anything.toUpperCase();      //  runtime error হতে পারে

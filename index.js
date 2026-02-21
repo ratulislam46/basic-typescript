@@ -54,3 +54,27 @@ function updateStatus(status) {
     console.log("Order Status:", status);
 }
 // updateStatus(Status.completed)
+// 10 --> Type Inference
+var age = 25; // inferred as number
+var userName = "Ali"; // inferred as string
+var isActive = true; // inferred as boolean
+// console.log(typeof userName);
+// 11 --> Literal Types 
+var direction;
+direction = "down";
+// console.log(direction);
+// 12 --> Optional $ Default Parameters 
+function userRole(role) {
+    if (role === void 0) { role = "user"; }
+    console.log(role);
+}
+;
+// userRole()
+// userRole("Admin")
+// 13 --> unknown and Any 
+var value = "TypeScript";
+if (typeof value === "string") {
+    console.log(value.toUpperCase());
+}
+var anything = 10;
+anything.toUpperCase(); //  runtime error হতে পারে
