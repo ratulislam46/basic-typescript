@@ -164,7 +164,7 @@ type Faculty = Teacher & Employee;
 কিছু নির্দিষ্ট নামযুক্ত কনস্ট্যান্টের সেট (যেমন: UP, DOWN, LEFT, RIGHT)।
 
 **কেন ব্যবহার করবেন:**  
-Readable ও maintainable কোড লেখার জন্য।
+যখন কিছু fixed, predefined value থাকে তখন enum ব্যবহার করা হয়।
 
 ###  উদাহরণ
 

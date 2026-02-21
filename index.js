@@ -32,3 +32,13 @@ var Teacher4 = { name: "Jahid", subject: "Math" };
 // console.log(Teacher2.salary);
 // console.log(Teacher3);
 // console.log(Teacher4);
+// 7. --> Enums
+var Direction;
+(function (Direction) {
+    Direction["Up"] = "UP";
+    Direction["Down"] = "DOWN";
+    Direction["Left"] = "LEFT";
+    Direction["Right"] = "RIGHT";
+})(Direction || (Direction = {}));
+;
+var move = Direction.Left;

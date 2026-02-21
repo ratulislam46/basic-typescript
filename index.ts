@@ -56,8 +56,19 @@ type Faculty1 = Teacher | Employee;
 const Teacher1: Teacher = { name: "Yusuf", subject: "English" };
 const Teacher2: Employee = { id: 6, salary: 500 };
 const Teacher3: Faculty = { name: "Jahid", subject: "Math", id: 1, salary: 300 }
-const Teacher4: Faculty1 = { name: "Jahid", subject: "Math"}
+const Teacher4: Faculty1 = { name: "Jahid", subject: "Math" }
 // console.log(Teacher1);
 // console.log(Teacher2.salary);
 // console.log(Teacher3);
 // console.log(Teacher4);
+
+
+
+// 7. --> Enums
+enum Direction {
+    Up = "UP",
+    Down = "DOWN",
+    Left = "LEFT",
+    Right = "RIGHT"
+};
+let move: Direction = Direction.Left;
