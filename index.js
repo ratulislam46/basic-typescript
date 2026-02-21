@@ -42,3 +42,15 @@ var Direction;
 })(Direction || (Direction = {}));
 ;
 var move = Direction.Left;
+// console.log(move);
+var Status;
+(function (Status) {
+    Status["pending"] = "PENDING";
+    Status["runing"] = "RUNING";
+    Status["cancelled"] = "CANCELLED";
+    Status["completed"] = "COMPLETED";
+})(Status || (Status = {}));
+function updateStatus(status) {
+    console.log("Order Status:", status);
+}
+// updateStatus(Status.completed)

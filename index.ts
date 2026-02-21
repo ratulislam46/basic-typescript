@@ -72,3 +72,14 @@ enum Direction {
     Right = "RIGHT"
 };
 let move: Direction = Direction.Left;
+// console.log(move);
+enum Status {
+    pending = "PENDING",
+    runing = "RUNING",
+    cancelled = "CANCELLED",
+    completed = "COMPLETED"
+}
+function updateStatus(status: Status): void {
+    console.log("Order Status:", status);
+}
+// updateStatus(Status.completed)
