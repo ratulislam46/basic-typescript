@@ -4,4 +4,9 @@ skills = ["HTML", "CSS", "React", "Next"];
 // console.log("Skills list :", skills);
 // Tuple 
 var Information = [101, "Rahim", true];
-// console.log(Information);
+var user1 = {
+    id: 105,
+    name: "Sakib",
+    role: "Admin"
+};
+// console.log(user1);
