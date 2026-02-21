@@ -1,14 +1,15 @@
 
-// Array 
+// 3.1 --> Array 
 let skills: string[];
 skills = ["HTML", "CSS", "React", "Next"];
 // console.log("Skills list :", skills);
 
-// Tuple 
+// 3.2 --> Tuple 
 let Information: [number, string, boolean] = [101, "Rahim", true];
 // console.log(Information);
 
 
+// 4 --> Interface & Type Alias
 type ID = string | number;
 
 interface UserAccount {
@@ -23,5 +24,15 @@ const user1: UserAccount = {
     name: "Sakib",
     role: "Admin"
 };
-
 // console.log(user1);
+
+// 5 -- > Function Typing
+function sum(a: number, b: number): number {
+    return a + b;
+}
+// console.log(sum(3,5));
+
+function Aleart(): void {
+    console.log("Typescript don't run browser");
+};
+// Aleart()
