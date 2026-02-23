@@ -55,6 +55,18 @@ function updateStatus(status) {
 }
 // updateStatus(Status.completed)
 // 8 --> Generics
+function identity(value) {
+    return value;
+}
+;
+var stringValue = identity("TS is Awesome");
+// console.log(stringValue);
+// 8.1 
+function sumProps(a, b) {
+    return [a, b];
+}
+var sumFunctionCall = sumProps("Age:", 23);
+console.log(sumFunctionCall);
 // 9 --> Type Assertion 
 var myData = "I completed my ssc and hsc";
 var textLength = myData.length;

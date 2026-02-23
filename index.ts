@@ -88,6 +88,18 @@ function updateStatus(status: Status): void {
 
 
 // 8 --> Generics
+function identity<T>(value: T): T {
+    return value;
+};
+let stringValue = identity<string>("TS is Awesome");
+// console.log(stringValue);
+
+// 8.1 
+function sumProps<T, U>(a: T, b: U): [T, U] {
+    return [a, b]
+}
+let sumFunctionCall = sumProps<string, number>("Age:", 23);
+console.log(sumFunctionCall);
 
 
 
@@ -96,7 +108,6 @@ function updateStatus(status: Status): void {
 let myData: any = "I completed my ssc and hsc";
 let textLength: number = (myData as string).length;
 // console.log(textLength);
-
 
 
 
