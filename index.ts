@@ -86,6 +86,20 @@ function updateStatus(status: Status): void {
 
 
 
+
+// 8 --> Generics
+
+
+
+
+// 9 --> Type Assertion 
+let myData: any = "I completed my ssc and hsc";
+let textLength: number = (myData as string).length;
+// console.log(textLength);
+
+
+
+
 // 10 --> Type Inference
 let age = 25;          // inferred as number
 let userName = "Ali";  // inferred as string
@@ -114,8 +128,8 @@ function userRole(role: string = "user"): void {
 let value: unknown = "TypeScript";
 
 if (typeof value === "string") {
-    console.log(value.toUpperCase());
+    // console.log(value.toUpperCase());
 }
 
-let anything: any = 10;
-anything.toUpperCase();      //  runtime error হতে পারে
+// let anything: any = 10;
+// anything.toUpperCase();      //  runtime error হতে পারে

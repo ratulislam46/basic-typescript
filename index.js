@@ -54,6 +54,11 @@ function updateStatus(status) {
     console.log("Order Status:", status);
 }
 // updateStatus(Status.completed)
+// 8 --> Generics
+// 9 --> Type Assertion 
+var myData = "I completed my ssc and hsc";
+var textLength = myData.length;
+// console.log(textLength);
 // 10 --> Type Inference
 var age = 25; // inferred as number
 var userName = "Ali"; // inferred as string
@@ -74,7 +79,7 @@ function userRole(role) {
 // 13 --> unknown and Any 
 var value = "TypeScript";
 if (typeof value === "string") {
-    console.log(value.toUpperCase());
+    // console.log(value.toUpperCase());
 }
-var anything = 10;
-anything.toUpperCase(); //  runtime error হতে পারে
+// let anything: any = 10;
+// anything.toUpperCase();      //  runtime error হতে পারে
