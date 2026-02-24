@@ -96,8 +96,11 @@ if (typeof value === "string") {
 // let anything: any = 10;
 // anything.toUpperCase();      //  runtime error হতে পারে
 function GenericsTest(a, b, c) {
-    console.log("Inside -->", typeof a, typeof b, typeof c);
+    // console.log("Inside -->", typeof a, typeof b, typeof c);
     return [a, b, c];
 }
 var valueOfGenericsTest = GenericsTest("If you understand TS, You feel so good!", true, 40);
-console.log("Outside -->", valueOfGenericsTest);
+// console.log("Outside -->", valueOfGenericsTest);
+var a = "Front-End Developer";
+var b = 15;
+console.log(typeof a, typeof b);

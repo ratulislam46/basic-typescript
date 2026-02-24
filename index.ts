@@ -146,9 +146,14 @@ if (typeof value === "string") {
 // anything.toUpperCase();      //  runtime error হতে পারে
 
 
-function GenericsTest <A, B, C>(a: unknown, b: unknown, c: unknown): unknown {
-    console.log("Inside -->", typeof a, typeof b, typeof c);
+function GenericsTest<A, B, C>(a: unknown, b: unknown, c: unknown): unknown {
+    // console.log("Inside -->", typeof a, typeof b, typeof c);
     return [a, b, c];
 }
 let valueOfGenericsTest = GenericsTest<string, boolean, number>("If you understand TS, You feel so good!", true, 40)
-console.log("Outside -->", valueOfGenericsTest);
+// console.log("Outside -->", valueOfGenericsTest);
+
+
+let a = "Front-End Developer";
+let b = 15;
+console.log(typeof a, typeof b);
