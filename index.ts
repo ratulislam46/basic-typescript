@@ -99,7 +99,7 @@ function sumProps<T, U>(a: T, b: U): [T, U] {
     return [a, b]
 }
 let sumFunctionCall = sumProps<string, number>("Age:", 23);
-console.log(sumFunctionCall);
+// console.log(sumFunctionCall);
 
 
 
@@ -144,3 +144,11 @@ if (typeof value === "string") {
 
 // let anything: any = 10;
 // anything.toUpperCase();      //  runtime error হতে পারে
+
+
+function GenericsTest <A, B, C>(a: unknown, b: unknown, c: unknown): unknown {
+    console.log("Inside -->", typeof a, typeof b, typeof c);
+    return [a, b, c];
+}
+let valueOfGenericsTest = GenericsTest<string, boolean, number>("If you understand TS, You feel so good!", true, 40)
+console.log("Outside -->", valueOfGenericsTest);
