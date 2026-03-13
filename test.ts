@@ -112,4 +112,4 @@ let user1: User = {
     email: "ratul@gmail.com"
 };
 
-console.log(updateUser(user1, { name: "Arfan" }));
+// console.log(updateUser(user1, { name: "Arfan" }));

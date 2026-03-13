@@ -83,4 +83,4 @@ var user1 = {
     name: "Ratul",
     email: "ratul@gmail.com"
 };
-console.log(updateUser(user1, { name: "Arfan" }));
+// console.log(updateUser(user1, { name: "Arfan" }));
